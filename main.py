@@ -1,64 +1,16 @@
-import pandas as pd
-import enum
 import pickle
-import cleaner
-import fastapi
-import json
-import pydantic
 from typing import Any
+
+import fastapi
+import pandas as pd
+
+import cleaner
+from schemas import employee
 
 app = fastapi.FastAPI()
 
 tree_model = pickle.load(open("models/tree_model.pkl", "rb"))
 knn_model = pickle.load(open("models/knn_model.pkl", "rb"))
-
-
-class ViajesNegocioEnum(str, enum.Enum):
-    NUNCA = "Nunca"
-    POCOS = "Pocos"
-    FRECUENTES = "Frecuentes"
-
-
-class GeneroEnum(str, enum.Enum):
-    HOMBRE = "Hombre"
-    MUJER = "Mujer"
-
-
-class EstadoCivilEnum(str, enum.Enum):
-    SOLTERO = "Soltero"
-    CASADO = "Casado"
-    DIVORCIADO = "Divorciado"
-
-
-class SobreTiempoEnum(str, enum.Enum):
-    SI = "Si"
-    NO = "No"
-
-
-class PermanceEnEmpresaEnum(str, enum.Enum):
-    SI = "SI"
-    NO = "NO"
-
-
-class Employee(pydantic.BaseModel):
-    Edad: int
-    ViajesNegocio: ViajesNegocioEnum
-    PermaneceEnEmpresa: PermanceEnEmpresaEnum
-    Distancia_casa: int
-    ID_empleado: int
-    Satisfacción_ambiente: int
-    Genero: GeneroEnum
-    Compromiso: int
-    Satisfaccion_trabajo: int
-    Estado_civil: EstadoCivilEnum
-    Ingreso_mensual: int
-    SobreTiempo: SobreTiempoEnum
-    Horas_Produccion: int
-    Bonos: int
-    Años_trabajando: int
-    Años_Compañia: int
-    Años_Rol_Actual: int
-    Años_Actual_Jefe: int
 
 
 @app.get("/")
@@ -68,7 +20,7 @@ async def root():
 
 @app.post("/predict")
 async def post_predict(
-    employee: Employee = fastapi.Body(
+    employee: employee.Employee = fastapi.Body(
         example={
             "Edad": 47,
             "ViajesNegocio": "Pocos",
