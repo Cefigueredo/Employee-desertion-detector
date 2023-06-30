@@ -1,0 +1,42 @@
+[
+  {
+    "Edad": 29,
+    "ViajesNegocio": "Pocos",
+    "PermaneceEnEmpresa": "NO",
+    "Distancia_casa": 5,
+    "ID_empleado": 471,
+    "Satisfacción_ambiente": 3,
+    "Genero": "M",
+    "Compromiso": 1.0,
+    "Satisfaccion_trabajo": 3,
+    "Estado_civil": "Soltero",
+    "Ingreso_mensual": 2140,
+    "SobreTiempo": "Si",
+    "Horas_Produccion": 80,
+    "Bonos": 0,
+    "Años_trabajando": 7,
+    "Años_Compañia": 6,
+    "Años_Rol_Actual": 1.0,
+    "Años_Actual_Jefe": 0
+  },
+  {
+    "Edad": 47,
+    "ViajesNegocio": "Pocos",
+    "PermaneceEnEmpresa": "SI",
+    "Distancia_casa": 5,
+    "ID_empleado": 447,
+    "Satisfacción_ambiente": 4,
+    "Genero": "Hombre",
+    "Compromiso": 3.0,
+    "Satisfaccion_trabajo": 3,
+    "Estado_civil": "Casado",
+    "Ingreso_mensual": 18300,
+    "SobreTiempo": "No",
+    "Horas_Produccion": 80,
+    "Bonos": 1,
+    "Años_trabajando": 21,
+    "Años_Compañia": 3,
+    "Años_Rol_Actual": 2.0,
+    "Años_Actual_Jefe": 1
+  }
+]
