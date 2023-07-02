@@ -42,7 +42,7 @@ async def post_predict(
             "Años_Actual_Jefe": 1,
         }
     )
-) -> dict[str, Any]:
+):
     df = pd.DataFrame(employee.dict(), index=[0])
     cleaned_input = cleaner.cleaner(df)
     y_pred = tree_model.predict(cleaned_input.iloc[[-1]])
