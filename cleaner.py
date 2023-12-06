@@ -23,7 +23,7 @@ def cleaner(df: pd.DataFrame):
 
     atributo = "ViajesNegocio"
 
-    def label_categorias(row):
+    def label_categorias_viajes(row):
         if row[atributo] == "Nunca":
             return 0
         elif row[atributo] == "Pocos":
@@ -33,11 +33,11 @@ def cleaner(df: pd.DataFrame):
         else:
             return None
 
-    df[atributo] = df.apply(lambda row: label_categorias(row), axis=1)
+    df[atributo] = df.apply(lambda row: label_categorias_viajes(row), axis=1)
 
     atributo = "Genero"
 
-    def label_categorias(row):
+    def label_categorias_genero(row):
         if row[atributo] == "Mujer":
             return 1
         elif row[atributo] == "Hombre":
@@ -45,11 +45,11 @@ def cleaner(df: pd.DataFrame):
         else:
             return None
 
-    df[atributo] = df.apply(lambda row: label_categorias(row), axis=1)
+    df[atributo] = df.apply(lambda row: label_categorias_genero(row), axis=1)
 
     atributo = "Estado_civil"
 
-    def label_categorias(row):
+    def label_categorias_estado_civil(row):
         if row[atributo] == "Soltero":
             return 0
         elif row[atributo] == "Casado":
@@ -59,11 +59,13 @@ def cleaner(df: pd.DataFrame):
         else:
             return None
 
-    df[atributo] = df.apply(lambda row: label_categorias(row), axis=1)
+    df[atributo] = df.apply(
+        lambda row: label_categorias_estado_civil(row), axis=1
+    )
 
     atributo = "SobreTiempo"
 
-    def label_categorias(row):
+    def label_categorias_sobretiempo(row):
         if row[atributo] == "Si":
             return 1
         elif row[atributo] == "No":
@@ -71,7 +73,9 @@ def cleaner(df: pd.DataFrame):
         else:
             return None
 
-    df[atributo] = df.apply(lambda row: label_categorias(row), axis=1)
+    df[atributo] = df.apply(
+        lambda row: label_categorias_sobretiempo(row), axis=1
+    )
 
     number_cols = df.dtypes[
         (df.dtypes == np.int64) | (df.dtypes == np.float64)

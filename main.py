@@ -1,5 +1,4 @@
 import pickle
-from typing import Any
 
 import fastapi
 import pandas as pd
