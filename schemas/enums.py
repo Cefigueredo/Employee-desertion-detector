@@ -21,8 +21,3 @@ class EstadoCivilEnum(str, enum.Enum):
 class SobreTiempoEnum(str, enum.Enum):
     SI = "Si"
     NO = "No"
-
-
-class PermanceEnEmpresaEnum(str, enum.Enum):
-    SI = "SI"
-    NO = "NO"
