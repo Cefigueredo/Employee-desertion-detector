@@ -23,7 +23,6 @@ async def post_predict(
         example={
             "Edad": 47,
             "ViajesNegocio": "Pocos",
-            "PermaneceEnEmpresa": "SI",
             "Distancia_casa": 5,
             "ID_empleado": 447,
             "Satisfacción_ambiente": 4,

@@ -6,7 +6,6 @@ from schemas import enums
 class Employee(pydantic.BaseModel):
     Edad: int
     ViajesNegocio: enums.ViajesNegocioEnum
-    PermaneceEnEmpresa: enums.PermanceEnEmpresaEnum
     Distancia_casa: int
     ID_empleado: int
     Satisfacción_ambiente: int

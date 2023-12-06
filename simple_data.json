@@ -2,7 +2,6 @@
   {
     "Edad": 29,
     "ViajesNegocio": "Pocos",
-    "PermaneceEnEmpresa": "NO",
     "Distancia_casa": 5,
     "ID_empleado": 471,
     "Satisfacción_ambiente": 3,
@@ -22,7 +21,6 @@
   {
     "Edad": 47,
     "ViajesNegocio": "Pocos",
-    "PermaneceEnEmpresa": "SI",
     "Distancia_casa": 5,
     "ID_empleado": 447,
     "Satisfacción_ambiente": 4,

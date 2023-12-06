@@ -11,10 +11,7 @@ def cleaner(df: pd.DataFrame):
     Returns:
         _type_: _description_
     """
-    print("Cleaning data...")
-
     df = df.drop(["ID_empleado"], axis=1)
-    df = df.drop(["PermaneceEnEmpresa"], axis=1)
     df = df.drop(["Horas_Produccion"], axis=1)
     df["ViajesNegocio"].replace("Ninguno", "Nunca", inplace=True)
     df["Satisfacción_ambiente"].replace(5, 4, inplace=True)
